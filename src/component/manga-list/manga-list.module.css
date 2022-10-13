@@ -1,0 +1,21 @@
+.mangaGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1em;
+    padding: 1em;
+}
+.mangaCover {
+    text-align: center;
+}
+.mangaImage:hover {
+    cursor: pointer;
+}
+.mangaImage {
+    margin-top: 10px;
+    border: 0.5px black solid;
+    border-radius: 20px;
+    box-shadow: 4px 3px 15px whitesmoke; 
+}
+.mangaTitle {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

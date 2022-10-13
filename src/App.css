@@ -1,11 +1,11 @@
 .App {
-  text-align: center;
   background-color: #282c34;
-  color: white;
-  padding-top: 0;
+  color: rgb(113, 166, 218);
+  min-height: 100vh;
 }
-
-.App-header {
-  
-  background-color: #282c34;
+h1 {
+  font-size: 4rem;
+  padding-top: 20px;
+  text-align: center;
+  text-decoration: underline;
 }
