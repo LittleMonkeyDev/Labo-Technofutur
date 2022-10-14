@@ -2,4 +2,15 @@
     display: flex;
     justify-content: center;
     margin-top: 15px;
+    text-align: center;
+    height: 2.5rem;
+}
+.input {
+    width: 30rem;
+    height: auto;
+    border-bottom-right-radius: 15px;
+}
+.button {
+    width: 10rem;
+    border-bottom-left-radius: 15px;
 }

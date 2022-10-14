@@ -7,7 +7,6 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Welcome on Manga Search !</h1>
         <Routes>
          <Route path="/" element ={<SearchPage></SearchPage>}></Route>
          <Route path="/manga-details" element ={<MangaDetails></MangaDetails>}></Route>
