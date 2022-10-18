@@ -5,13 +5,14 @@ import MangaListItem from "./manga-list-item"
 import style from "./manga-list.module.css"
 
 const MangaList = (props) => {
+    const { type } = props
     const {searchManga} = props
     const [manga, setManga] = useState([])
     const [page, setPage] = useState(0)
     const navigate = useNavigate()
 
     useEffect(() => {
-        axios.get("https://kitsu.io/api/edge/anime?filter[text]=" + searchManga + "&page[limit]=12&page[offset]=" + page * 12)
+        axios.get(`https://kitsu.io/api/edge/${type}?filter[text]=` + searchManga + "&page[limit]=12&page[offset]=" + page * 12)
             .then(({data}) => {
                 console.log(data)
                 setManga(data.data)

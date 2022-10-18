@@ -1,0 +1,19 @@
+.navBar {
+    display: flex;
+    justify-content: center;
+    align-content: space-between;
+    color: rgb(233, 147, 68);
+    background-color: #282c34;
+    opacity: 0.9;
+} 
+.navBar a {
+    color: rgb(233, 147, 68);
+}
+.home {
+    margin: 1rem;
+    list-style: none;
+    font-size: 2rem;
+    cursor: pointer;
+    border-top: 2px rgb(233, 147, 68) solid;
+    border-bottom: 2px rgb(233, 147, 68) solid;
+}
