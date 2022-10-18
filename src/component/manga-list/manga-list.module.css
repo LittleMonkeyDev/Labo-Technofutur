@@ -7,6 +7,8 @@
 .mangaCover {
     text-align: center;
     position: relative;
+    background-color: #282c34;
+    border-radius: 25px;
 }
 .imageButton:hover {
     transform: scale(1.2) translateY(-2rem);
@@ -26,6 +28,8 @@
 .mangaTitle {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     height: 50px;
+    color:  rgb(113, 166, 218);
+    padding-top: 1rem;
 }
 .wantToKnowMore {
     background-color: white;
@@ -37,4 +41,19 @@
     padding: 1rem;
     font-weight: bold;
     cursor: pointer;
+}
+.previousPage {
+    height: 2.5rem;
+    width: 10rem;
+    border-radius: 3rem;
+    font-weight: bold;
+}
+.nextPage {
+    height: 2.5rem;
+    width: 10rem;
+    border-radius: 3rem;
+    font-weight: bold;
+}
+.buttonPage {
+    text-align: center;
 }

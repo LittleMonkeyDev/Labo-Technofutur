@@ -7,24 +7,41 @@ import style from "./manga-list.module.css"
 const MangaList = (props) => {
     const {searchManga} = props
     const [manga, setManga] = useState([])
+    const [page, setPage] = useState(0)
     const navigate = useNavigate()
 
     useEffect(() => {
-        axios.get("https://kitsu.io/api/edge/anime?filter[text]=" + searchManga)
+        axios.get("https://kitsu.io/api/edge/anime?filter[text]=" + searchManga + "&page[limit]=12&page[offset]=" + page * 12)
             .then(({data}) => {
                 console.log(data)
                 setManga(data.data)
 
             })
-    }, [searchManga])
+    }, [searchManga, page])
 
     const navigateToDetails = (index) => {
         navigate("/manga-details", {state : manga[index]})
     }
 
+    const navigateToNextPage = () => {
+        setPage(page + 1)
+    }
+
+    const navigateToPreviousPage = () => {
+        if (page > 0) {
+            setPage(page - 1)
+        }
+    }
+
     return (
-        <div className={style.mangaGrid}>
-            {manga.map((element, index) => <MangaListItem key={element.id} title={element.attributes.canonicalTitle} image={element.attributes.posterImage.small} index={index} onHandleClick={navigateToDetails}></MangaListItem>)}
+        <div>
+            <div className={style.mangaGrid}>
+                {manga.map((element, index) => <MangaListItem key={element.id} title={element.attributes.canonicalTitle} image={element.attributes.posterImage.small} index={index} onHandleClick={navigateToDetails}></MangaListItem>)}
+            </div>
+            <div className={style.buttonPage}>
+                <button className={style.previousPage} onClick={navigateToPreviousPage}>Previous Page</button>
+                <button className={style.nextPage} onClick={navigateToNextPage}>Next Page</button>
+            </div>
         </div>
     )
 }

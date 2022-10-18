@@ -1,3 +1,7 @@
+.mangaDetails {
+    background-color: #282c34;
+    min-height: 100vh;
+}
 .imageSize {
     width: 600px;
     height: auto;
